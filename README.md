@@ -12,6 +12,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+   - [Run Test](#run-tests)
   - [Run Linters](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -98,6 +99,11 @@ Install this project with:
 ### Usage
 
 `rails s`
+
+### Run Test
+To run app test. run the following commad:
+
+`rspec`
 
 ### Run Linters
 
