@@ -7,9 +7,8 @@ RSpec.describe User, type: :model do
   before { subject.save }
 
   context 'testing validations' do
-
     it 'name should be present' do
-    subject.name = nil
+      subject.name = nil
       expect(subject).to_not be_valid
     end
 
@@ -23,14 +22,14 @@ RSpec.describe User, type: :model do
     end
 
     it 'posts_counter should not be less than 0' do
-     subject.posts_counter = -10
+      subject.posts_counter = -10
       expect(subject).to_not be_valid
     end
   end
 
-context 'testing method' do
-  it 'most_recent_post should be 0' do
-    expect(subject.most_recent_post.length).to eq 0
+  context 'testing method' do
+    it 'most_recent_post should be 0' do
+      expect(subject.most_recent_post.length).to eq 0
+    end
   end
-end
 end

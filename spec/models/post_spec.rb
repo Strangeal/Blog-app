@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before :each do
-   @first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-   @first_post = Post.create(author: @first_user, title: 'Hello, I’m Tom from Mexico', text: 'This is my first post') 
+    @first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                              bio: 'Teacher from Mexico.')
+    @first_post = Post.create(author: @first_user, title: 'Hello, I’m Tom from Mexico', text: 'This is my first post')
   end
 
   context 'testing validations' do
@@ -34,7 +35,7 @@ RSpec.describe Post, type: :model do
       Comment.create(post: @first_post, author: @first_user, text: 'Amazing post Tom')
       Comment.create(post: @first_post, author: @first_user, text: 'Amazing post Tom')
 
-        expect(@first_post.most_recent_comments.length).to eq 5
-      end
+      expect(@first_post.most_recent_comments.length).to eq 5
+    end
   end
 end
