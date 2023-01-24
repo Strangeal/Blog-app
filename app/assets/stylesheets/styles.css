@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: 1px solid #000;
+  font-size: 1.2rem;
+  background-color: aqua;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user__post {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.user__post img {
+  border: 1px solid #000;
+}
+
+.user__post__info {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #000;
+}
+
+.user__post__info .post__num {
+  display: flex;
+  align-items: end;
+  line-height: 1px;
+}
+
+.user_show_container {
+  margin: 1.2rem;
+}
+
+.user_bio {
+  border: 1px solid #000;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user_bio h3 {
+  margin: 0;
+}
+
+.post_container {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.post_container .counters {
+  display: flex;
+  justify-content: end;
+  font-size: 0.8rem;
+}
+
+.post_comment_limit {
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+
+.post_container_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.post_container_info span {
+  font-size: 0.8rem;
+}
+
+.post_desc {
+  border: 1px solid #000;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
