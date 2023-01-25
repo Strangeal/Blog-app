@@ -1,6 +1,6 @@
 <h1>Users show method</h1>
 
-  <%= render partial: "shared/user_card" %>
+ <%= render "shared/user_card", person: @user%>
 <div class="user_show_container">
 <div class="user_bio">
   <h3>Bio</h3>
@@ -18,5 +18,5 @@
   </div>
 <% end %>
 
-<button>See all posts</button>
+<%= link_to 'See all posts', "#{@user.id}/posts", target: '_blank' %>
 </div>

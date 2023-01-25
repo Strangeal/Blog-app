@@ -1,13 +1,7 @@
 <h1>Users Index action</h1>
 
 <% @users.each do |person| %>
-  <div class="user__post">
-    <%= image_tag "#{person.photo}" %>
-
-  <div class="user__post__info">
-    <h3><%= person.name%></h3>
-    <div class="post__num">
-    <p> Number of posts: <%= person.posts_counter %></p></div>
-  </div>
-  </div>
+<%= link_to "users/#{person.id}" do%>
+<%= render partial: "shared/user_card", :locals => {person: person} %>
+<% end %>
 <% end %>

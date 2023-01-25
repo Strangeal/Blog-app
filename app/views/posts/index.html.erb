@@ -1,6 +1,6 @@
 <h1>Posts index method</h1>
 
-<%= render partial: "shared/user_card" %>
+<%= render "shared/user_card", person: @user %>
 
 <div class="user_show_container">
 <% @posts.each_with_index do |post, index| %>
@@ -12,9 +12,6 @@
     <span>Likes: <%= post.likes_counter%> </span>
   </div>
   </div>
-
-
-
 
   <div class="post_comment_limit">
   <% post.most_recent_comments.each do |comment|%>
