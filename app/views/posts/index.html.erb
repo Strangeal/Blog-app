@@ -1,1 +1,26 @@
 <h1>Posts index method</h1>
+
+<%= render "shared/user_card", person: @user %>
+
+<div class="user_show_container">
+<% @posts.each_with_index do |post, index| %>
+  <div class="post_container">
+  <h4><%= post.class %> #<%=index%></h4>
+  <p><%= post.title %></p>
+  <div class="counters">
+    <span>Comments: <%= post.comments_counter %></span> 
+    <span>Likes: <%= post.likes_counter%> </span>
+  </div>
+  </div>
+
+  <div class="post_comment_limit">
+  <% post.most_recent_comments.each do |comment|%>
+    <p><%= comment.author.name%> : <%= comment.text%></p>
+  <% end %>
+  </div>
+<% end %>
+
+<button>Pagination</button>
+</div>
+
+

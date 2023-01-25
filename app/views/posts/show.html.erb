@@ -1,1 +1,18 @@
 <h1>Posts show method</h1>
+
+<div class="user_show_container">
+   <div class="post_container_info">
+    <h4><%= @posts.class %> #<%= @user.id %> by <%= @user.name%></h4>
+    <span>Comments: <%= @posts.comments_counter%> Likes: <%= @posts.likes_counter%></span>
+  </div>
+
+    <div class="post_desc">
+      <%= @posts.text%>
+    </div>
+
+    <div class="post_comment_limit post_comments">
+      <% @comments.each do |comment| %>
+        <p><%= comment.author.name%> : <%= comment.text%></p>
+      <% end %>
+    </div>
+</div>
