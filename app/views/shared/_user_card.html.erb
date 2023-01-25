@@ -1,7 +1,7 @@
  <div class="user__post">
     <%= image_tag "#{@user.photo}" %>
     <div class="user__post__info">
-      <h3><%=link_to @user.name %></h3>
+      <h3><%= @user.name %></h3>
       <div class="post__num">
      <p> Number of posts: <%= @user.posts_counter%> </p>
      </div>
