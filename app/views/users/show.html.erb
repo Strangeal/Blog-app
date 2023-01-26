@@ -9,7 +9,7 @@
 
 <% @user.most_recent_post.each_with_index do |post, index| %>
   <div class="post_container">
-  <h4><%= post.class %> #<%=index%></h4>
+  <h4><%= link_to post.class, users_next_post_path(@user.id, post.id) %> #<%=index+1%></h4>
   <p><%= post.title %></p>
   <div class="counters">
     <span>Comments: <%= post.comments_counter %></span> 
