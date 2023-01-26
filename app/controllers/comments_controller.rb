@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(text: params[:text], author: current_user, post_id: params[:id])
-    p @comment
+    p params
     if @comment.save
       redirect_to root_path, notice: "comment posted successfully"
     else

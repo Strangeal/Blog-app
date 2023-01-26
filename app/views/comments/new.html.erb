@@ -2,8 +2,8 @@
 
 <%= form_with model: @comments, url: comments_create_path, data: {turbo: false} do |form| %>
   <div>
-    <%= form.label :comment %><br>
-    <%= form.text_area :comment %>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
   </div>
 
   <div>
