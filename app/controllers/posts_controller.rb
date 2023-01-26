@@ -9,7 +9,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(author: current_user, title: params[:post][:title], text: params[:post][:text])
+    @post = Post.new(post_params)
+    @post.author = current_user
     if @post.save
       redirect_to users_posts_path(current_user.id), notice: 'Post saved'
     else
@@ -22,5 +23,11 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = Post.find(params[:id])
     @comments = Comment.where(post_id: params[:id])
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
