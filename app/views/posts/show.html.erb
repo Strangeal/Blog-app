@@ -17,6 +17,8 @@
     </div>
 
     <div>
-    <button><%= link_to 'Write a comment', comments_new_path(@user.id, @posts.id) %></button>
+    <button>
+      <%= link_to 'Write a comment', new_user_post_comment_path(@user.id, @posts.id) %>
+    </button>
     </div>
 </div>

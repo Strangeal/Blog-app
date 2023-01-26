@@ -1,4 +1,4 @@
-<%= form_with model: @post, url: posts_create_path, data: {turbo: false} do |form| %>
+<%= form_with model: @post, url: user_posts_path, data: {turbo: false} do |form| %>
  <% if form.object.errors.any? %>
     <div class="alert alert-danger">
     <% form.object.errors.full_messages.each do |message| %>
@@ -9,11 +9,11 @@
 
   <div class="form__container">
     <div class="form_control">
-      <%= form.label :title %><br>
+      <%= form.label :title %>
       <%= form.text_field :title%>
     </div>
     <div class="form_control">
-      <%= form.label :text %><br>
+      <%= form.label :text %>
       <%= form.text_field :text %>
     </div>
 

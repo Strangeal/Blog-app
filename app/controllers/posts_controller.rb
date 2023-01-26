@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.author = current_user
     if @post.save
-      redirect_to users_posts_path(current_user.id), notice: 'Post saved'
+      redirect_to user_path(current_user.id), notice: 'Post saved'
     else
 
       render :new, alert: 'An error occured'
@@ -28,6 +28,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:author, :title, :text)
   end
 end
