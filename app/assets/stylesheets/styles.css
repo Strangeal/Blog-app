@@ -10,6 +10,14 @@ h4 {
   margin: 0;
 }
 
+.notice {
+  color: blue;
+}
+
+.alert {
+  color: red;
+}
+
 button {
   appearance: none;
   background: none;
