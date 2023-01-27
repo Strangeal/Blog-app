@@ -1,7 +1,7 @@
 <h1>Users Index action</h1>
 
 <% @users.each do |person| %>
-<%= link_to "users/#{person.id}" do%>
+<%= link_to user_path(person.id) do%>
 <%= render partial: "shared/user_card", :locals => {person: person} %>
 <% end %>
 <% end %>

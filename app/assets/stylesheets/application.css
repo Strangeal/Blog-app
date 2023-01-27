@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  background-color: aqua;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button a {
+  font-size: 0.8rem;
+}
+
+.notice {
+  background-color: #d4edd9;
+  color: #155724;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+img {
+  width: 100%;
+}
+
+.alert {
+  background-color: #f8d7d9;
+  color: #721c23;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+}

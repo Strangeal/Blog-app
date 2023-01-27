@@ -1,0 +1,24 @@
+<%= form_with model: @post, url: user_posts_path, data: {turbo: false} do |form| %>
+ <% if form.object.errors.any? %>
+    <div class="alert alert-danger">
+    <% form.object.errors.full_messages.each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+    </div>
+  <% end %>
+
+  <div class="form__container">
+    <div class="form_control">
+      <%= form.label :title %>
+      <%= form.text_field :title%>
+    </div>
+    <div class="form_control">
+      <%= form.label :text %>
+      <%= form.text_field :text %>
+    </div>
+
+    <div>
+      <%= form.submit "Create Post"%>
+    </div>
+  </div>
+<% end %>

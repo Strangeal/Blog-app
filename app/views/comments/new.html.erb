@@ -1,0 +1,14 @@
+<h1>New Comment</h1>
+
+<%= form_with model: @comments, url: user_post_comments_path, data: {turbo: false} do |form| %>
+  <div class="form__container">
+    <div class="form_control">
+      <%= form.label :text %>
+      <%= form.text_area :text %>
+    </div>
+
+    <div>
+      <%= form.submit "Post Comment" %>
+    </div>
+  </div>
+<% end %>
