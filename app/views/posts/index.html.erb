@@ -3,7 +3,7 @@
 <%= render "shared/user_card", person: @user %>
 
 <div class="user_show_container">
-<% @posts.each_with_index do |post, index| %>
+<% @user.posts.each_with_index do |post, index| %>
   <div class="post_container">
   <h4><%= link_to post.class, user_post_path(@user.id, post.id) %> #<%=index+1%></h4>
   <p><%= post.title %></p>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="post_comment_limit">
-  <% post.most_recent_comments.each do |comment|%>
+  <% post.most_recent_comments.includes([:author]).each do |comment|%>
     <p><%= comment.author.name%> : <%= comment.text%></p>
   <% end %>
   </div>
