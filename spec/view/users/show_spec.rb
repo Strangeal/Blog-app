@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe "User show view", type: :system do
   describe 'Show page' do
     before(:each) do

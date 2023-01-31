@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe "Users index view", type: :system do
   describe "Index page" do
     before(:each) do
