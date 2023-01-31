@@ -10,7 +10,7 @@
 <% @user.most_recent_post.each_with_index do |post, index| %>
   <div class="post_container">
   <h4><%= link_to post.class, user_post_path(@user.id, post.id) %> #<%=index+1%></h4>
-  <p class="title"><%= post.title %></p>
+  <p class="title"><%= post.title %> and <%= post.text%></p>
   <div class="counters">
     <span>Comments: <%= post.comments_counter %></span> 
     <span>Likes: <%= post.likes_counter%> </span>

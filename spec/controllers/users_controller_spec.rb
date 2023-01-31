@@ -20,18 +20,19 @@ RSpec.describe UsersController, type: :request do
     end
 
     context 'show action' do
+      subject { User.new(name: 'Bajeri') }
+      before { subject.save }
+      before(:each) { get "/users/#{subject.id}/" }
+
       it 'render show action' do
-        get '/users/12'
         expect(response).to render_template(:show)
       end
 
       it 'return status code ok' do
-        get '/users/12'
         expect(response).to have_http_status(:ok)
       end
 
       it 'return show view text' do
-        get '/users/12'
         expect(response.body).to include('Users show method')
       end
     end
