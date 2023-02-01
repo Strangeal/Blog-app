@@ -17,6 +17,7 @@
   border: 1px solid #000;
   height: 100%;
   padding: 0.4rem 1.5rem;
+  color: #000;
 }
 
 .user__post__info h3 {
@@ -48,6 +49,11 @@
   border: 1px solid #000;
   margin-bottom: 1rem;
   padding: 0.5rem;
+}
+
+.post_container h4,
+.post_container a {
+  color: blue;
 }
 
 .post_container .title {

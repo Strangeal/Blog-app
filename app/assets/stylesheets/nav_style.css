@@ -23,10 +23,11 @@
 }
 
 .nav_link {
+  transition: all 0.7s ease;
   color: #F8F9FA;
+  opacity: 0.6;
 }
 
 .nav_link:hover {
-  color: orange;
-  transition: all 0.7s ease;
+  opacity: 1;
 }
