@@ -128,6 +128,11 @@ OR
 - Twitter: [Link to Twitter Profile](https://twitter.com/Str_angeal)
 - LinkedIn: [Link to LinkedIn Profile](https://www.linkedin.com/in/justice-bajeri-0b7211243/)
 
+👤 **Temitope Ogunleye**
+
+- GitHub: [@topeogunleye](https://github.com/topeogunleye)
+- Twitter: [@tope_leye](https://twitter.com/tope_leye)
+- LinkedIn: [ogunleye](https://linkedin.com/in/ogunleye)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

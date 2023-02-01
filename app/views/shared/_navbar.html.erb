@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="nav_container">
+      <ul class="nav_menu">
+    <%= link_to "Navbar", root_path, class: "navbar_brand" %>
+        <li class="nav_item">
+        <%= link_to "Home", root_path, class: "nav_link active" %>
+        </li>
+      </ul>
+
+      <ul class="nav_menu">
+        <% if user_signed_in? %>
+        <li class="nav_item">
+        <%= link_to "edit password", edit_user_registration_path, class: "nav_link" %>
+        </li>
+        <li class="nav_item">
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "nav_link"%>
+        </li>
+        <% else %>
+        <li class="nav_item">
+        <%= link_to "Sign Up", new_user_registration_path, class: "nav_link" %>
+        </li>
+        <li class="nav_item">
+        <%= link_to "Sign In", new_user_session_path, class: "nav_link" %>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+</nav>
