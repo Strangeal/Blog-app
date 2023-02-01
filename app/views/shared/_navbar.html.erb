@@ -1,8 +1,7 @@
 <nav class="navbar">
-  <div class="container">
-  <%= link_to "Navbar", root_path, class: "navbar_brand" %>
-    <div>
+  <div class="nav_container">
       <ul class="nav_menu">
+    <%= link_to "Navbar", root_path, class: "navbar_brand" %>
         <li class="nav_item">
         <%= link_to "Home", root_path, class: "nav_link active" %>
         </li>
@@ -14,7 +13,7 @@
         <%= link_to "edit password", edit_user_registration_path, class: "nav_link" %>
         </li>
         <li class="nav_item">
-        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn_outline_secondary" %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "" %>
         </li>
         <% else %>
         <li class="nav_item">
@@ -25,6 +24,5 @@
         </li>
         <% end %>
       </ul>
-    </div>
   </div>
 </nav>

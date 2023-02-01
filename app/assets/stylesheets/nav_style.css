@@ -1,0 +1,35 @@
+.navbar {
+}
+
+.navbar_brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.nav_container {
+  background-color: #343A3F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 3px solid #F8F9FA;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.nav_item {
+  margin: 0 2rem;
+  font-size: 1rem;
+}
+
+.nav_link {
+  color: #F8F9FA;
+}
+
+.nav_link:hover {
+  color: orange;
+  transition: all 0.7s ease;
+}
