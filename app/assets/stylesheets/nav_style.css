@@ -3,12 +3,13 @@
   font-size: 1.5rem;
   color: #fff;
 }
+
 .nav_container {
-  background-color: #343A3F;
+  background-color: #343a3f;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 3px solid #F8F9FA;
+  border-top: 3px solid #f8f9fa;
 }
 
 .nav_menu {
@@ -24,7 +25,7 @@
 
 .nav_link {
   transition: all 0.7s ease;
-  color: #F8F9FA;
+  color: #f8f9fa;
   opacity: 0.6;
 }
 
