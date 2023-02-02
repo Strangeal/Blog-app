@@ -85,6 +85,7 @@
   margin-bottom: 1rem;
   padding: 0.8rem;
 }
+
 .post_comment_limit .modify {
   display: flex;
   justify-content: space-between;
@@ -129,5 +130,4 @@
   .container_fluid {
     padding: 2rem 5rem;
   }
-
 }

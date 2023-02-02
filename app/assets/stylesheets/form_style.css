@@ -81,7 +81,6 @@ input[type="submit"]:hover {
   opacity: 1;
 }
 
-
 @media screen  and (min-width: 900px) {
   .sign {
     width: 65%;
