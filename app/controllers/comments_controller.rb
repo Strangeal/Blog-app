@@ -14,6 +14,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to user_post_path(current_user.id, @comment.post_id), notice: 'Comment deleted successfully'
+  end
+
   private
 
   def comment_params

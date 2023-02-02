@@ -23,12 +23,14 @@
   font-size: 1rem;
 }
 
-.nav_link {
+.nav_link,
+.profile_username a {
   transition: all 0.7s ease;
   color: #f8f9fa;
   opacity: 0.6;
 }
 
-.nav_link:hover {
+.nav_link:hover,
+.profile_username a:hover {
   opacity: 1;
 }

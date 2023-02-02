@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  has_many :comments, foreign_key: :post_id
+  has_many :comments, foreign_key: :post_id, dependent: :delete_all
   has_many :likes, foreign_key: :post_id
   belongs_to :author, class_name: 'User'
   before_save :post_counter
