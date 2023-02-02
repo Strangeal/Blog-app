@@ -15,15 +15,23 @@
       <% @comments.each do |comment| %>
         <p><%= comment.author.name%> : <%= comment.text%></p>
       <div class="modify">
-      <%= link_to 'edit' %>
       </div>
+
+      <% if can? :destroy, comment %>
+      <%= button_to 'delete', method: :delete %>
       <% end %>
-      <%= button_to 'delete', user_post_path(@user.id, @posts.id), method: :delete %>
+
+      <% end %>
     </div>
+      
 
     <div>
     <button>
       <%= link_to 'Write a comment', new_user_post_comment_path(@user.id, @posts.id) %>
     </button>
+
+    <% if can? :destroy, @post %>
+      <%= button_to 'delete', user_post_path(@user.id, @posts.id), method: :delete %>
+    <% end %>
     </div>
 </div>
