@@ -1,9 +1,13 @@
 /* User show method styles */
+.container_fluid {
+  padding: 2rem;
+}
+
 .user__post {
   display: grid;
   grid-template-columns: 1fr 5fr;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 0;
   gap: 2rem;
 }
 
@@ -31,9 +35,9 @@
   font-size: 0.8rem;
 }
 
-.user_show_container {
+/* .user_show_container {
   margin: 1.2rem;
-}
+} */
 
 .user_bio {
   border: 1px solid #000;
@@ -115,4 +119,15 @@
 .delete_post button {
   margin-left: 2rem;
   background-color: red;
+}
+
+@media screen  and (min-width: 900px) {
+  /* body {
+    background-color: aqua;
+  } */
+
+  .container_fluid {
+    padding: 2rem 5rem;
+  }
+
 }
