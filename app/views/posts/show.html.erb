@@ -14,13 +14,12 @@
     <div class="post_comment_limit post_comments">
       <% @comments.each do |comment| %>
         <p><%= comment.author.name%> : <%= comment.text%></p>
+      
       <div class="modify">
+        <% if can? :destroy, comment %>
+        <%= button_to 'delete comment', user_post_comment_path(@user.id, @posts.id, comment.id), method: :delete %>
+        <% end %>
       </div>
-
-      <% if can? :destroy, comment %>
-      <%= button_to 'delete', method: :delete %>
-      <% end %>
-
       <% end %>
     </div>
       
@@ -30,8 +29,9 @@
       <%= link_to 'Write a comment', new_user_post_comment_path(@user.id, @posts.id) %>
     </button>
 
-    <% if can? :destroy, @post %>
+   
+    </div>
+     <% if can? :destroy, @posts %>
       <%= button_to 'delete', user_post_path(@user.id, @posts.id), method: :delete %>
     <% end %>
-    </div>
 </div>
