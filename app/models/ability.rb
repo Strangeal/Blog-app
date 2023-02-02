@@ -14,8 +14,14 @@ class Ability
     #   can :read, :all
     #   return unless user.admin?
     #   can :manage, :all
-
-   
+    user ||= User.new
+    if user.is?(:admin)
+      can :manage, :all
+    else
+      can :read, :all
+      can :destroy, Post, author: user
+      can :destroy, Comment, author: user
+    end
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
