@@ -9,7 +9,7 @@
 
       <ul class="nav_menu">
         <% if user_signed_in? %>
-        <li class="nav_item">
+        <li class="nav_item profile_username">
         <%= link_to current_user.name, class: "nav_link" %>
         </li>
         <li class="nav_item">

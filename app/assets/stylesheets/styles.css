@@ -81,6 +81,20 @@
   margin-bottom: 1rem;
   padding: 0.8rem;
 }
+.post_comment_limit .modify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modify p {
+  margin: 0.3rem 0;
+}
+
+.modify button {
+  font-size: 10px;
+  background-color: red;
+}
 
 .post_container_info {
   display: flex;
@@ -92,4 +106,13 @@
   border: 1px solid #000;
   padding: 0.3rem;
   margin-bottom: 1rem;
+}
+
+.btn_container {
+  display: flex;
+}
+
+.delete_post button {
+  margin-left: 2rem;
+  background-color: red;
 }
