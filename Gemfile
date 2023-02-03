@@ -17,6 +17,7 @@ gem 'pg', '~> 1.1'
 
 # Use devise for authentication
 gem 'devise'
+gem 'devise-jwt'
 
 # Use CanCanCan for authorization
 gem 'cancancan'
