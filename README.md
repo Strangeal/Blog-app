@@ -14,6 +14,7 @@
   - [Usage](#usage)
    - [Run Test](#run-tests)
   - [Run Linters](#run-tests)
+  - [Run Endpoints](#Api-Endpoint-Testing)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -116,6 +117,32 @@ OR
 `rubocop -a` 
 
 **it will automatically correct the errors**
+
+
+### Api-Endpoint-Testing
+
+- Add user to database using(postman) on this path
+`http://localhost:3000/api/v1/register`
+```first_user = User.create(
+  name: "Tom",
+  photo: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1674721420/Meta%20tags/girl-2696947_1280_2_ct8ivd.jpg",
+  bio: "Teacher from Mexico.",
+  email: "tom@apple.com",
+  password: "mysecret@12",
+  password_confirmation: "mysecret@12",
+  role: "admin",
+  jti: "sdhfsh64y4" )
+  ```
+
+  - Check your teminal for comfirmation link to verify account
+  - Check out terminal after verification to copy the jti key generated dusring sign up
+  - Add the copied jti key in this directory `config/devise.rb` on line `312` after the sacret
+  - Open postman and navigate to this routes `http://localhost:3000/api/v1/login`
+  add your login details as body and make a POST request to log in
+  - Click on `headers` and copy the authentication key
+  - Make a GET request to this path `http://localhost:3000/api/v1/users/`
+  and add the authentication key you copied as a bearer token to get access to database
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
