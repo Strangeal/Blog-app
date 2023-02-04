@@ -64,6 +64,8 @@ group :development do
   # Use bullet to fix N + 1 problems
   gem 'bullet'
 
+  gem 'rswag-specs'
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -87,3 +89,5 @@ gem 'devise-jwt'
 gem 'cancancan'
 
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+
+gem 'rswag'
