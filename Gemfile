@@ -15,11 +15,6 @@ gem 'sprockets-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
-# Use devise for authentication
-gem 'devise'
-
-# Use CanCanCan for authorization
-gem 'cancancan'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -83,3 +78,12 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# Use devise for authentication
+gem 'devise'
+gem 'devise-jwt'
+
+# Use CanCanCan for authorization
+gem 'cancancan'
+
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
